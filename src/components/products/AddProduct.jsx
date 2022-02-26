@@ -13,7 +13,7 @@ export default function AddProduct({props}){
     const productId=props.computedMatch.params.id;
     const history=useHistory();
     const authToken=localStorage.getItem('auth-token');
-    const productDefaults={name:'',price:'',salePrice:'',tax:'',hsn:'',stock:'',description:'',assured:false,deliveryCharge:0,img:'http://localhost:3000/prod-default.jpg'}
+    const productDefaults={name:'',price:'',salePrice:'',tax:'',hsn:'',stock:'',description:'',assured:false,deliveryCharge:0,img:'/prod-default.jpg'}
     const [productDetails,setProductDetails]=useState(productDefaults);
     const [loading,setLoading]=useState(false);
     const [requestType,setRequestType]=useState('Add');
