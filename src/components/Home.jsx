@@ -10,7 +10,7 @@ export default function Home(){
     const history=useHistory();
     //const [search,setSearch]=useState([]);
     const [slider,setSlider]=useState(0);
-    const sliders=['slider1.jpg','slider2.jpg','slider3.jpg','slider4.jpg','slider5.jpg'];
+    const sliders=['/slider1.jpg','/slider2.jpg','/slider3.jpg','/slider4.jpg','/slider5.jpg'];
     const categories=[
         {name:'Mobiles',img:'mobiles.png'},
         {name:'Fashion',img:'fashion.png'},
@@ -81,9 +81,9 @@ export default function Home(){
         </Grid>
             <Grid sx={{padding:'8px'}}>
                 <Stack direction="row" spacing={2} onClick={()=>history.push('/products/view')} sx={{'&:hover':{cursor:'pointer'}}}>
-                <img alt="banner" height="220px" width="100%" src="soundbars.jpeg"></img>     
-                <img alt="banner" height="220px" width="100%" src="mattress.jpg"></img>
-                <img alt="banner" height="220px" width="100%" src="music.jpg"></img>
+                <img alt="banner" height="220px" width="100%" src="/soundbars.jpeg"></img>     
+                <img alt="banner" height="220px" width="100%" src="/mattress.jpg"></img>
+                <img alt="banner" height="220px" width="100%" src="/music.jpg"></img>
             </Stack>
             </Grid>      
         </Grid>
