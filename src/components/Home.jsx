@@ -32,6 +32,7 @@ export default function Home(){
     }
 
     useEffect(()=>{
+
         // const data=['Product 1','Product 2','Product 3'];
         // setSearch(data);
 
@@ -68,7 +69,7 @@ export default function Home(){
         </Grid>
         <Grid sx={{height:300}}>
             <Grid sx={{padding:'8px'}}>
-                 <Grid onClick={()=>history.push('/products/view')} sx={{display:'flex',alignItems:'center',height:'280px',backgroundImage:`url(${sliders[slider]})`,'&:hover':{cursor:'pointer'}}}>
+                 <Grid sx={{display:'flex',alignItems:'center',height:'280px',backgroundImage:`url(${sliders[slider]})`,'&:hover':{cursor:'pointer'}}}>
                  <ChevronLeft onClick={()=>{navigateSliderImages('left')}} sx={{fontSize:'48px',borderRadius:1,marginLeft:-1,backgroundColor:'#fafdfa',padding:'24px 0px 24px 5px','&:hover':{cursor:'pointer'}}}/>
                  <ChevronRight onClick={()=>{navigateSliderImages('right')}} sx={{marginLeft:'auto',marginRight:-1,fontSize:'48px',borderRadius:1,backgroundColor:'#fafdfa',padding:'24px 0px 24px 5px','&:hover':{cursor:'pointer'}}}/>
                  {/* <img alt="logo" height="230px" width="100%" src="slider1.jpg"></img> */}

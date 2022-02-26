@@ -63,7 +63,7 @@ export default function SingleProductView(props){
            <Grid padding={2}>
                <Stack direction="row" spacing={2}>
                    <Stack padding={8} sx={{border:'0.1pt solid', borderColor:'#ccc'}}>
-                        <img alt="main-img" src="/laptop.jpeg" height="220px" width="360px"></img>
+                        <img alt="main-img" src={productDetails.img} height="220px" width="360px"></img>
                    </Stack>
                    <Stack spacing={1} width="30%">
                        <Typography variant="h6">{productDetails.name}</Typography>
