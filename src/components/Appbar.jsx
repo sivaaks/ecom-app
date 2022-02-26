@@ -13,6 +13,15 @@ export default function Appbar(){
     } catch(err){
         localStorage.setItem('cartItems',JSON.stringify([]));
     }
+
+    const getCartItemsCount=()=>{
+        try{
+            return cartItems.length
+        }catch(err){
+            localStorage.setItem('cartItems',JSON.stringify([]));
+            return 0; 
+        }
+    }
     
     //const history=useHistory();
     //const [drawerOpen,setDrawerOpen]=useState(false);
@@ -76,10 +85,10 @@ export default function Appbar(){
             <Container maxWidth="lg" sx={{marginLeft:'160px'}}>
                 <Stack flexDirection="row">
                     <Stack onClick={()=>{history.push('/')}} sx={{'&:hover':{cursor:'pointer'}}}>
-                    <img alt="logo" width="75" src="logo.png"></img>
+                    <img alt="logo" width="75" src="/logo.png"></img>
                         <Stack direction="row">
                             <Typography sx={{color:'white',fontSize:'11px',marginTop:'-1px',fontStyle:'italic'}}>Explore <span style={{color:'#ffe500',fontSize:'11px',marginRight:'2px',fontWeight:500}}>Plus</span></Typography>
-                            <img alt="logo" height="10px" width="10px" src="plus.png"></img>
+                            <img alt="logo" height="10px" width="10px" src="/plus.png"></img>
                         </Stack>
                     </Stack>
                     <Stack sx={{ml:2}}>
@@ -129,7 +138,7 @@ export default function Appbar(){
                                 onClick={()=>{history.push('/cart')}}
                                 sx={{color:'white',fontWeight:'500'}}>
                                     Cart 
-                                    <Badge badgeContent={cartItems.length} color="error">
+                                    <Badge badgeContent={getCartItemsCount()} color="error">
                                         <ShoppingCart/>
                                     </Badge>
                                 </Button>
