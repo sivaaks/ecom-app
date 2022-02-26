@@ -11,7 +11,7 @@ export default function Appbar(){
     try{
         cartItems=JSON.parse(localStorage.getItem('cartItems'));
     } catch(err){
-        localStorage.setItem('cartItems',[]);
+        localStorage.setItem('cartItems',JSON.stringify([]));
     }
     
     //const history=useHistory();
@@ -76,10 +76,10 @@ export default function Appbar(){
             <Container maxWidth="lg" sx={{marginLeft:'160px'}}>
                 <Stack flexDirection="row">
                     <Stack onClick={()=>{history.push('/')}} sx={{'&:hover':{cursor:'pointer'}}}>
-                    <img alt="logo" width="75" src="http://localhost:3000/logo.png"></img>
+                    <img alt="logo" width="75" src="logo.png"></img>
                         <Stack direction="row">
                             <Typography sx={{color:'white',fontSize:'11px',marginTop:'-1px',fontStyle:'italic'}}>Explore <span style={{color:'#ffe500',fontSize:'11px',marginRight:'2px',fontWeight:500}}>Plus</span></Typography>
-                            <img alt="logo" height="10px" width="10px" src="http://localhost:3000/plus.png"></img>
+                            <img alt="logo" height="10px" width="10px" src="plus.png"></img>
                         </Stack>
                     </Stack>
                     <Stack sx={{ml:2}}>
